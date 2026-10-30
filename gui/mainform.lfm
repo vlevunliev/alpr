@@ -1,0 +1,90 @@
+object FormMain: TFormMain
+  Left = 200
+  Height = 900
+  Top = 120
+  Width = 1350
+  Caption = 'ALPR - FastALPR in Lazarus'
+  ClientHeight = 900
+  ClientWidth = 1350
+  DesignTimePPI = 144
+  Position = poScreenCenter
+  LCLVersion = '4.4.0.0'
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  object PanelTop: TPanel
+    Left = 0
+    Height = 66
+    Top = 0
+    Width = 1350
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 66
+    ClientWidth = 1350
+    TabOrder = 0
+    object BtnOpen: TButton
+      Left = 12
+      Height = 45
+      Top = 10
+      Width = 210
+      Caption = 'Open image...'
+      TabOrder = 0
+      OnClick = BtnOpenClick
+    end
+    object BtnVideo: TButton
+      Left = 234
+      Height = 45
+      Top = 10
+      Width = 210
+      Caption = 'Open video...'
+      TabOrder = 1
+      OnClick = BtnVideoClick
+    end
+    object BtnUrl: TButton
+      Left = 456
+      Height = 45
+      Top = 10
+      Width = 210
+      Caption = 'Open URL...'
+      TabOrder = 2
+      OnClick = BtnUrlClick
+    end
+    object LabelStatus: TLabel
+      Left = 687
+      Height = 1
+      Top = 21
+      Width = 1
+    end
+  end
+  object MemoResult: TMemo
+    Left = 0
+    Height = 180
+    Top = 720
+    Width = 1350
+    Align = alBottom
+    Font.Name = 'Consolas'
+    ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssAutoVertical
+    TabOrder = 1
+  end
+  object ImageView: TImage
+    Left = 0
+    Height = 654
+    Top = 66
+    Width = 1350
+    Align = alClient
+    Center = True
+    Proportional = True
+    Stretch = True
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = 'Images|*.jpg;*.jpeg;*.png;*.bmp|All files|*.*'
+    Left = 300
+    Top = 12
+  end
+  object OpenDialogVideo: TOpenDialog
+    Filter = 'Video|*.mp4;*.m4v;*.mkv;*.mov;*.avi;*.wmv;*.ts;*.mts;*.3gp|All files|*.*'
+    Left = 360
+    Top = 12
+  end
+end

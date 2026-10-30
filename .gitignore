@@ -1,0 +1,23 @@
+# Lazarus / Free Pascal build output
+lib/
+backup/
+*.o
+*.ppu
+*.a
+*.obj
+*.compiled
+*.res
+*.lps
+*.exe
+*.dbg
+
+# ONNX Runtime - download it yourself (see README)
+*.dll
+
+# local test data that is not ours to publish
+testdata/*.mp4
+testdata/Congestion_*
+
+# runtime leftovers
+*.url
+debug_*.png
